@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    
+    <meta name="robots" content="noindex">
+
+    <title>RGraph: HTML5 charts library</title>
+
+    <link rel="stylesheet" href="css/website.css" type="text/css" media="screen" />
+    
+    <style>
+        /* Override the background image */
+        body {
+            background-color: white;
+            background-image: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .RGraph_tooltip {
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+            padding: 10px !important;
+            opacity: 1 !important;
+            background-color: white !important;
+            border-width: 3px !important;
+            border-style: solid !important;
+        }
+
+        .RGraph_tooltip b {
+            display: block;
+            font-size: 16pt;
+        }
+
+        ul {
+            list-style-image: url('images/bullet.png');
+        }
+    </style>
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <script src="libraries/RGraph.common.core.js" ></script>
+    <script src="libraries/RGraph.common.dynamic.js" ></script>
+    <script src="libraries/RGraph.common.key.js" ></script>
+    <script src="libraries/RGraph.drawing.rect.js" ></script>
+    <script src="libraries/RGraph.common.effects.js" ></script>
+    <script src="libraries/RGraph.common.tooltips.js" ></script>
+    <script src="libraries/RGraph.bar.js" ></script>
+
+    <style>
+        /* Override the main sites padding that allows for the nav bar */
+        body {
+            padding-top: 0 !important;
+        }
+    </style>
+
+</head>
+<body  style="margin: 8px !important">
+
+    <a href="http://www.rgraph.net" target="_blank">    
+        <img src="images/rgraph.jpg" width="261" height="68" alt="RGraph: Free 2D/3D JavaScript charts" hspace="10" vspace="10" />
+    </a>
+    
+
+    <canvas width="600" height="350" id="cvs" style="float: right"></canvas>
+
+
+
+
+
+
+
+
+
+    <h2>Demos <span>of charts (local)</span></h2>
+        <p>
+            Demos of some of the various charts and features provided by RGraph
+        </p>
+        
+        <p align="left">
+            <a href="./demos/"><b>Go to the demos (local) &raquo;</b></a>
+        </p>
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2>Demos <span>of charts (online)</span></h2>
+        <p>
+            The same demos as above are also available on rgraph.net. Due to browser security the AJAX demos will not work locally
+            so you can see these if you go online.
+        </p>
+        
+        <p align="left">
+            <a href="http://www.rgraph.net/demos/"><b>Go to the demos (online) &raquo;</b></a>
+        </p>
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2>Other <span>pages on rgraph.net</span></h2>
+        <ul>
+            <li>
+                <a href="http://www.rgraph.net" target="_blank">Home page</a><br />
+                The RGraph homepage on www.rgraph.net<br /><br />
+            </li>
+            <li>
+                <a href="http://www.rgraph.net/examples" target="_blank">Examples</a><br />
+                Examples of the types of charts that are supported by RGraph.<br /><br />
+            </li>
+            <li>
+                <a href="http://www.rgraph.net/docs" target="_blank">Documentation</a><br />
+                Documentation for RGraph<br /><br />
+            </li>
+            <li>
+                <a href="http://www.rgraph.net/docs/howto-index.html" target="_blank">HOWTO guides</a><br />
+                Guides for doing specific tasks with RGraph.<br /><br />
+            </li>
+        </ul>
+    
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.rgraph.net" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http://www.rgraph.net', null, 'top=50,left=50,width=600,height=368'); return false"><img src="./images/facebook-large.png" width="200" height="43" alt="Share on Facebook" border="0" title="Visit the RGraph Facebook page" /></a>
+            <a href="https://twitter.com/_rgraph" target="_blank" onclick="window.open('https://twitter.com/_rgraph', null, 'top=50,left=50,width=700,height=400'); return false"><img src="./images/twitter-large.png" width="200" height="43" alt="Share on Twitter" border="0" title="Mention RGraph on Twitter" /></a>
+        </p>
+
+
+
+
+    <p style="font-size: 70%">
+        &copy; Copyright 2015 RGraph Licensing All rights reserved.
+    </p>
+
+
+    <script>
+        window.onload = function ()
+        {
+            var bar = new RGraph.Bar({
+                id: 'cvs',
+                data:[[45,-60],[-65,-30],[40,80],[-59,48]],
+                options: {
+                    colors: ['rgba(255, 176, 176, 1)', 'rgba(153, 208, 249,1)'],
+                    labels: ['Luis', 'Kevin', 'John', 'Gregory'],
+                    tooltips: [
+                        '<b>Luis</b><br />Made acceptable progress in the<br /> amount of sales made',
+                        '<b>Luis</b><br />A significant loss in sales accounts',
+                        '<b>Kevin</b><br />A significant loss in sales accounts',
+                        '<b>Kevin</b><br />A smaller loss - but still a loss!',
+                        '<b>John</b><br />Acceptable sales',
+                        '<b>John</b><br />Good rate of sales this month',
+                        '<b>Gregory</b><br />A bad loss this month',
+                        '<b>Gregory</b><br />A good upturn in sales'
+                    ],
+                    ymax: 100,
+                    ylabelsCount: 4,
+                    numyticks: 8,
+                    strokestyle: 'rgba(0,0,0,0)',
+                    hmarginGrouped: 2,
+                    textAccessible: true,
+                    unitsPre: '$',
+                    title: 'Bar chart with tooltips',
+                    titleY: 25,
+                    gutterTop: 55,
+                    gutterLeft: 40,
+                    gutterRight: 15,
+                    gutterBottom: 80,
+                    xaxispos: 'center',
+                    key: ['Results from Monday','Results from Tuesday'],
+                    keyPosition: 'gutter',
+                    keyPositionY: 30,
+                    variant: '3d',
+                    axisColor: '#aaa',
+                    shadowColor: '#ddd'
+                }
+            }).draw().on('tooltip', function (obj)
+            {
+                var tooltip = RGraph.Registry.get('chart.tooltip'),
+                idx     = RGraph.sequentialIndexToGrouped(tooltip.__index__, obj.data),
+                colors  = ['pink','blue']
+        
+                tooltip.style.borderColor = str = colors[idx[1]];
+            });
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <link rel="stylesheet" href="demos.css" type="text/css" media="screen" />
+    
+    <script src="../libraries/RGraph.common.core.js" ></script>
+    <script src="../libraries/RGraph.common.dynamic.js" ></script>
+    <script src="../libraries/RGraph.vprogress.js" ></script>
+    <script src="../libraries/RGraph.semicircularprogress.js" ></script>
+    
+    <title>RGraph demo: An adjustable SemiCircular Progress chart with offset start/end</title>
+    
+    
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="description" content="An adjustable SemiCircular Progress chart with offset start/end" />
+    
+</head>
+<body>
+
+    <!-- Share buttons -->
+    <p style="float: right">
+        <script>
+            document.write('<a href="" target="_blank" onclick="window.open(\'https://www.facebook.com/sharer/sharer.php?u=http://www.rgraph.net' + location.pathname + '\', null, \'top=50,left=50,width=600,height=368\'); return false"><img src="../images/facebook-large.png" width="200" height="43" alt="Share on Facebook" border="0" title="Visit the RGraph Facebook page" id="facebook_link" /></a>&nbsp;');
+            document.write('<a href="https://twitter.com/_rgraph" target="_blank" onclick="window.open(\'https://twitter.com/intent/tweet?text=Check%20out%20this%20demo%20of%20RGraph:%202D/3D%20JavaScript%20charts%20-%20Free%20and%20Open%20Source%20http://www.rgraph.net' + location.pathname + '\', null, \'top=50,left=50,width=700,height=400\'); return false"><img src="../images/twitter-large.png" width="200" height="43" alt="Share on Twitter" border="0" title="Mention RGraph on Twitter" id="twitter_link" /></a>');
+        </script>
+    </p>
+
+    <h1>An adjustable SemiCircular Progress chart with offset start/end</h1>
+
+    <canvas id="cvs" width="500" height="300">[No canvas support]</canvas>
+    <canvas id="cvs2" width="100" height="300">[No canvas support]</canvas>
+    
+    <script>
+        var ssp = new RGraph.SemiCircularProgress({
+            id: 'cvs',
+            min: 0,
+            max: 100,
+            value: 86,
+            options: {
+                gutterTop: 10,
+                gutterBottom: 105,
+                gutterLeft: 10,
+                gutterRight: 10,
+                unitsPost: '%',
+                labelsCenterSize: 70,
+                labelsCenterValign: 'center',
+                labelsMinSize: 19,
+                labelsMinOffsetAngle:-0.1,
+                labelsMinOffsetx:0,
+                labelsMinOffsety:0,
+                labelsMaxSize: 19,
+                labelsMaxOffsetAngle:0.1,
+                labelsMaxOffsetx:0,
+                labelsMaxOffsety:0,
+                adjustable: true,
+                textAccessiblePointerevents: false,
+                colors: ['Gradient(white:#0a0)'],
+                anglesStart: RGraph.PI - 0.5,
+                anglesEnd: RGraph.TWOPI + 0.5
+            }
+        }).draw();
+    </script>
+
+    <p></p>
+
+    This goes in the documents header:
+    <pre class="code">
+&lt;script src="RGraph.common.core.js"&gt;&lt;/script&gt;
+&lt;script src="RGraph.common.dynamic.js"&gt;&lt;/script&gt;
+&lt;script src="RGraph.semicircularprogress.js"&gt;&lt;/script&gt;
+</pre>
+    
+    Put this where you want the chart to show up:
+    <pre class="code">
+&lt;canvas id="cvs" width="500" height="300"&gt;
+    [No canvas support]
+&lt;/canvas&gt;
+</pre>
+
+    This is the code that generates the chart:
+    <pre class="code">
+&lt;script&gt;
+    var ssp = new RGraph.SemiCircularProgress({
+        id: 'cvs',
+        min: 0,
+        max: 100,
+        value: 86,
+        options: {
+            gutterTop: 10,
+            gutterBottom: 105,
+            gutterLeft: 10,
+            gutterRight: 10,
+            unitsPost: '%',
+            labelsCenterSize: 70,
+            labelsCenterValign: 'center',
+            labelsMinSize: 19,
+            labelsMinOffsetAngle:-0.1,
+            labelsMinOffsetx:0,
+            labelsMinOffsety:0,
+            labelsMaxSize: 19,
+            labelsMaxOffsetAngle:0.1,
+            labelsMaxOffsetx:0,
+            labelsMaxOffsety:0,
+            adjustable: true,
+            textAccessiblePointerevents: false,
+            colors: ['Gradient(white:#0a0)'],
+            anglesStart: RGraph.PI - 0.5,
+            anglesEnd: RGraph.TWOPI + 0.5
+        }
+    }).grow();
+ &lt;/script&gt;
+</pre>
+
+
+
+    
+    <p>
+        <a href="./">&laquo; Back</a>
+    </p>
+
+</body>
+</html>

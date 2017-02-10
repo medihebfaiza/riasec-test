@@ -1,0 +1,532 @@
+    @viewport{
+        width: extend-to-zoom;
+        zoom: 1.0;
+    }
+    
+    @-ms-viewport{
+        width: extend-to-zoom;
+        zoom: 1.0;
+    }
+    
+    html {
+        min-height: 100%;
+        position: relative;
+    }
+    
+    body {
+        font-family: "Segoe UI Light", "Segoe UI", "Verdana";
+        font-family: Arial, Verdana, sans-serif;
+        font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+        font-size: 1.2em;
+        overflow-x: hidden;
+        color: #666;
+        margin-top: 0;
+        text-align: center;
+        height: 100%;
+        line-height: 30px;
+    }
+
+
+    b {
+        font-weight: bold;
+    }
+    
+    div#shareLinks {
+        position: fixed;
+        width: 310px;
+        height: 30px;
+        right: 0;
+        top: 0;
+        padding: 5px;
+        border-left: 5px white solid;
+        background-color: white;
+        box-shadow: 0 0 10px #ccc;
+        opacity: .75;
+        border-bottom-left-radius: 15px;
+        z-index: 5;
+    }
+
+
+
+
+
+
+
+
+    div#main-body-container {
+        background-color: white;
+        padding: 2px;
+        padding-bottom: 5px;
+        padding-top: 10px;
+        border-radius: 10px;
+        text-align: left;
+        
+        /*
+        * Commented as it causes an issue in IE9
+        min-height: 550px;
+        */
+    }
+    
+    h1 {
+        margin-top: 5px;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: "Segoe UI Light", "Segoe UI", "Verdana";
+        font-weight: 100;
+        text-shadow: 2px 2px 3px #ddd;
+        line-height: 110%;
+    }
+    
+    h1 span,
+    h2 span,
+    h3 span,
+    h4 span {
+        color: #65AEFF;
+        font-style: italic;
+        font-weight: light;
+        text-shadow: 2px 2px 3px #ddd;
+    }
+    
+    pre.code,
+    code {
+        padding: 5px;
+        background-color: #eee;
+        border: 2px dashed gray;
+        overflow: auto;
+    }
+    
+    pre.code span {
+        color: green;
+    }
+    
+    pre.code span span {
+        color: #770;
+    }
+    
+    #breadcrumb {
+        font-style: italic;
+        margin: 2px;
+        font-size: 80%;
+        position: relative;
+        top: 20px;
+    }
+    
+    #breadcrumb a,
+    #logo a {
+        text-decoration: none;
+    }
+    
+    #breadcrumb {
+        top: 10px;
+    }
+    
+    ol li {
+        margin-top: 20px;
+    }
+    
+    ol#implementation li code {
+        margin-top: 5px;
+    }
+    
+    ol.compact li {
+        margin-top: 0;
+    }
+    
+    td.description {
+    background-color: #eee;
+    padding: 3px;
+    border: 1px solid #ddd;
+    }
+    
+    td.chart {
+        text-align: center;
+    }
+    
+    .example_boxout {
+        background-color: #eee;
+        padding: 3px;
+        border: 1px solid #aaa;
+    }
+    
+    div#devtag {
+        border-radius: 5px;
+        position: fixed;
+        top: 5px;
+        left: 70px;
+        border: 2px solid black;
+        text-align: center;
+        font-weight: bold;
+        font-family: Arial;
+        background-color: red;
+        z-index: 1001;
+    }
+    
+    ol#colors li {
+        margin: 0;
+    }
+    
+    div.list-item {
+        width: 220px;
+        display: inline-block;
+    }
+    
+    div.list-item.label {
+        width: 170px;
+    }
+    
+    legend {
+        background-color: #efefef;
+        border: 1px solid #75736e;
+    }
+    
+    body#licensing span {
+        font-size: 120%;
+    }
+    
+    div.warning {
+        background-color: #ffa;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 15px;
+        opacity: 1;
+        box-shadow: 2px 2px 2px #ccc;
+    }
+    
+    
+    div#title div#image {
+        float: left;
+        margin-right: 15px;
+    }
+    
+    div#title div#text {
+        padding-top: 5px;
+        margin-left: 70px;
+    }
+    
+    div.warning p {
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    div.description {
+        border: 1px dashed gray;
+        background-color: #eee;
+        font-size: 75%;
+        padding: 3px;
+    }
+    
+    div#social {
+        display: inline;
+        display: inline-block;
+    }
+    
+    div.testimonial {
+        font-size: 80%;
+        padding: 6px;
+    }
+    
+    span.javascript-comment {
+        color: #090;
+    }
+    
+    .ModalDialog_dialog {
+        box-shadow: 0 0 25px gray ! important;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    ul {
+        list-style-image: url('/images/bullet.png');
+    }
+    
+    .documentation_header {
+        border: 1px solid #aaa;
+        background-color: #eee;
+        font-style: italic;
+        padding: 5px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+    }
+    
+    span#byline {
+        position: relative;
+        top: -15px;
+    }
+    
+    div#socialIcons {
+        float: right;
+        padding-right: 50px;
+        font-variant: small-caps;
+        text-align: center;
+        position: relative;
+        top: 0;
+    }
+    
+    
+    p#copyright {
+        text-align: center;
+        font-size: 70%;
+        color: black;
+    }
+    
+    p#copyright a {
+        color: black;
+    }
+    
+    p#copyright a:hover {
+        font-weight: bold;
+    }
+    
+    div#social-links {
+        font-size: 0;
+    }
+    
+    div#frontPageTestimonialBoxout {
+        padding: 15px;
+        margin-right: 10px;
+        background-color: rgba(200,200,200,0.35);
+    }
+    div#frontPageTestimonialBoxout p#readMoreLink {
+        font-size: 0.8em;
+        text-align: right;
+    }
+
+    #supported-chart-icons div.icon {
+        width: 64px;
+        height: 64px;
+        background-image: url(/images/chart-icons/chart-image-sprite.png);
+        float: left;
+        margin-left: 8px;
+        margin-right: 8px;
+        background-repeat: none;
+        text-align: center;
+        opacity: 0.5;
+        transform: scale(0.85);
+        transition: opacity .5s, transform .5s;
+        height: 70px;
+        cursor: pointer;
+    }
+    
+    #supported-chart-icons div.icon:hover {
+        opacity: 1;
+        transform:  scale(1.1);
+    }
+
+    #supported-chart-icons div.icon div {
+        position: relative;
+        top: 70px;
+    }
+
+    /*
+    * The floated boxes on the front page 
+    */
+
+    #front-page-float-container {
+		display: flex;
+	}
+	
+	#front-page-float-container > div:first-child {
+	}
+
+    #front-page-float-left-lower,
+    #front-page-float-left {
+        background-color: rgba(0,255,0,0.25);
+		width: 50%;
+        float: left;
+        padding: 15px;
+		margin-left: 15px;
+		margin-right: 15px;
+    }
+    
+    #front-page-float-left-lower {
+        background-color: cyan;
+    }
+
+    #front-page-float-right-lower,
+    #front-page-float-right {
+        background-color: rgba(255,0,0,0.25);
+        width: 50%;
+        float: left;
+        padding: 15px;
+		margin-left: 15px;
+		margin-right: 15px;
+    }
+
+    #front-page-float-right-lower {
+        background-color: rgba(255,255,0,0.5);
+    }
+
+
+
+    #latest-support-forum-topics h2,
+    #latest-support-forum-topics-container h2,
+
+    #front-page-float-left h2,
+    #front-page-float-left-lower h2,
+    #front-page-float-right h2,
+    #front-page-float-right-lower h2 {
+        font-family: Arial Black, Arial;
+        text-transform: uppercase;
+        margin-left: 15px;
+        text-shadow: none;
+    }
+
+    #front-page-float-left,
+    #front-page-float-left-lower,
+    #front-page-float-right,
+    #front-page-float-right-lower {
+        min-height: 120px;
+    }
+    
+    #text-only-link {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        z-index: 2;
+        font-size: 70%;
+        font-weight: bold;
+        font-family: Arial black;
+        color: #aaf;
+        background-color: rgba(255,255,255,0.75);
+        padding: 5px;
+    }
+    
+    /**
+    * Forum styles
+    * 
+    * This one hides the small screen message list
+    */
+    div#forumMonthListSmallScreenMonthList,
+    div#forumMessageListSmallScreen,
+    p#forumMessageListSmallScreen {
+        display: none;
+    }
+    
+    div#forumMonthListSmallScreenMonthList a:active {
+        font-weight: bold;
+    }
+    
+    /*
+     * The front page demo links
+     */
+    ul#news img {
+        transition: transform .25s;
+    }
+
+    ul#news img:hover {
+        transform: scale(1.1);
+    }
+
+
+    div#navigation-top-bar-select-menu {
+        display: none;
+    }
+
+    p#summary {
+        background-color: rgba(240,240,240,0.75);
+        padding: 15px;
+    }
+    
+    div.example-chart-thumbnails img {
+        box-shadow: 0 0 15px #ddd;
+        transition: transform .25s;
+        padding: 5px;
+        margin: 15px;
+        width: 200px;
+        height: 150px;
+    }
+    
+    div.example-chart-thumbnails img:hover {
+        transform: scale(1.1);
+    }
+
+
+
+
+
+
+    #latest-support-forum-topics-container {
+        display: flex;
+        width: 100%;
+    }
+    
+    #latest-support-forum-topics {
+        width: 300px;
+        background-color: rgba(0,255,255,0.1);
+        padding: 5px;
+        flex-grow: 0;
+        margin-left: 12.5px;
+        text-align: center;
+    }
+
+
+
+
+
+
+
+    div#notify_container {
+        background-color: #cfc;
+        padding: 15px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    input#notify_email {
+        padding: 5px;
+        font-size: 18pt;
+        width: 80%;
+    }
+    
+    input#notify_submit {
+        float: none;
+    }
+
+    /**
+    * The about page photo
+    */
+    body#aboutpage div#richard-heyes-photo {
+        width: 500px;
+        height: 283px;
+        float: right;
+        position: relative;
+    }
+    
+    body#aboutpage div#richard-heyes-photo img {
+        float: right;
+    }
+    
+    body#aboutpage div#richard-heyes-photo span {
+        font-size: 350%;
+        position: absolute;
+        right: 10px;
+        bottom: 20px;
+        font-weight: bold;
+        font-family: Arial black, Arial;
+    }
+
+    div#donation-block {
+        text-align: center;
+        width: 100%;
+        height: 100px;
+    }
+    
+    div#donation-block div {
+        display: inline-block;
+        padding-left: 5px;
+        padding-right: 5px;
+    }

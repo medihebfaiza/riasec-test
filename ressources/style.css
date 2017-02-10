@@ -1,0 +1,304 @@
+/*
+
+palette :
+https://color.adobe.com/fr/create/color-wheel/?base=2&rule=Analogous&selected=4&name=Mon%20th%C3%A8me%20Color&mode=rgb&rgbvalues=0.81,0.48900252293205654,0.27439219578450147,0.85,0.2016169075234294,0.5034801310467837,0.3744141761305969,0.21826923496212514,0.76,0.2016169075234294,0.6489719569257446,0.85,0.21176470588235294,0.7215686274509804,0.3607843137254902&swatchOrder=0,1,2,3,4
+
+html{
+    font-family: "Calibri Light";
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+    margin: 0;
+    top:0;
+    padding: 0;
+}
+
+*/
+
+/*
+  LAYOUT :
+*/
+
+/*Footer responsive*/
+html, body {
+	height: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+	height: 100%;
+	margin: 0 auto -80px; /* the bottom margin is the negative value of the footer's height */
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.push {
+  height: 80px; /* .push must be the same height as .footer */
+}
+
+.footer {
+	height: 80px; /* .push must be the same height as .footer */
+  padding: 2%;
+  background-color: #33C9D9 ;
+  color: white;
+  text-align: center;
+}
+
+/*
+  TOP :
+*/
+
+#logoPolytech{
+  width: 3%;
+}
+
+.navbar {
+    background-color: #33C9D9 ;
+    border-color: rgba(255, 255, 255, 0) ;
+    color: white;
+}
+
+#titre {
+    font-family: 'Pacifico', cursive;
+    color: white;
+}
+
+#identifiant{
+  color: white ;
+}
+
+#identifiant:hover{
+  color: white ;
+  background-color: #33C9D9 ;
+}
+
+.nav>li>a {
+  color: white ;
+}
+
+.nav>li>a:hover{
+  color: #5F38C2 ;
+  background-color: #33C9D9 ;
+}
+
+.nav>li>a:focus{
+  color: #33C9D9 ;
+  background-color: white ;
+}
+
+
+
+button{
+    border: none;
+    border-radius: 10px;
+}
+
+
+table{
+    width: 100%;
+}
+td{
+    width: 15%;
+    text-align: left;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2 ;
+}
+
+#formConnexionEtud{
+    background-color: #36B85C ;
+    color: white ;
+    border-radius: 5px ;
+    padding: 2%;
+    float: center;
+    width: 50%;
+}
+
+#formConnexionAdmin{
+    background-color: #D9333D ;
+    color: white ;
+    border-radius: 5px ;
+    padding: 2%;
+    float: center;
+    width: 50%;
+}
+
+
+
+#promoError, #questionnaireError{
+    text-align: center;
+    border: solid;
+    background: tomato;
+    color: black;
+    display: none;
+}
+
+.buttonConnexion{
+    width: 30%;
+    text-align: center;
+    height: 50px;
+    margin-top: 0.5%;
+    vertical-align: middle;
+    border: none;
+
+}
+
+.panel-primary>.panel-heading{
+	background-color: #36B85C ;
+}
+
+.groupeQuestion{
+    border: solid;
+    margin-bottom: 1%;
+		border-color: #f2f2f2;
+		border-radius: 1px;
+		border-width: 0.5px;
+
+}
+/*
+.groupeQuestion tr {
+    border: solid;
+		border-color: #f2f2f2;
+		border-radius: 1px;
+    border-width: 0.5px;
+}
+
+.groupeQuestion td {
+    border-bottom: solid;
+		border-color: #f2f2f2;
+		border-radius: 1px;
+    border-width: 0.5px;
+    padding-left: 1%;
+}
+.table_promo{
+    border: solid;
+    padding-bottom: 2%;
+}
+*/
+.table_promo tr td{
+    border-bottom: solid;
+		border-color: #e6e6e6;
+		border-radius: 2px;
+		padding-bottom: 1%;
+}
+
+#suivant {
+  background: #36B85C ;
+  color: white ;
+}
+
+#precedent {
+  background: #33A5D9 ;
+  color: white ;
+}
+
+#envoyer {
+  background: #36B85C ;
+  color: white ;
+}
+
+#suivant:hover, #precedent:hover, #envoyer:hover {
+  background: #5F38C2;
+  color: white;
+}
+
+.updateQuestion{
+    display: none;
+    float: right;
+		margin-bottom: 2px;
+		margin-right: 2px;
+    /*
+    on cache le bouton
+     */
+}
+
+
+.inputQuestion{
+    display: none;
+}
+
+#forbidImg{ /* image centrée */
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.verif{
+    color:red;
+}
+
+.groupeQuestionEtu{
+    display: none;
+}
+
+.codePromo{
+    display: none;
+}
+
+.buttonContainer{
+    display: block;
+    float: right;
+}
+
+/* bouton sur la page d'accueil*/
+#connexionEtu{
+    float: right;
+    background-color: white ;
+    color: #36B85C;
+}
+
+#connexionAdm{
+    float: right;
+    background-color: white ;
+    color: #D9333D;
+}
+
+#btnEtu{
+    color: white;
+    background: #36B85C;
+    width: 50%;
+    border-color: rgba(255, 255, 255, 0);
+}
+
+#btnAdm{
+    color: white;
+    background: #D9333D;
+    width: 50%;
+    border-color: rgba(255, 255, 255, 0);
+}
+
+#btnEtu:hover, #btnAdm:hover, #connexionEtu:hover, #connexionAdm:hover{
+    background: #5F38C2;
+    color: white;
+}
+
+#deconnexionAdmin, #deconnexionEtu{
+    color: white;
+}
+
+#deconnexionAdmin:hover, #deconnexionEtu:hover{
+    color: #5F38C2;
+}
+
+.alert-danger{
+  display: none;
+}
+
+#resultatByMail{
+    display: none;
+}
+
+#error{
+	display: block;
+}
+
+.promoName{
+	margin-left: 20%;
+}
